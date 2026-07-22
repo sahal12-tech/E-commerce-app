@@ -1,4 +1,5 @@
-# flutter_catelog_page
+# E-commerce app
+
 
 A new Flutter project.
 
