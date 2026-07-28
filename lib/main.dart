@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/util/theme/theme.dart';
 
 void main() {
+
+  // todo: Add widgets Binding
+  // todo: Init Local Storage
+  // todo: Await Native Splash
+  // todo: Initialize Fire Base
+  // todo: Initialize Authentication
   runApp(const App());
 }
 
