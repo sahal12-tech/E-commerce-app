@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_catelog_page/util/theme/theme.dart';
 import 'app.dart';
 
 void main() {
