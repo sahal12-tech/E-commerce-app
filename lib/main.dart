@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/util/contants/colors.dart';
 import 'app.dart';
 
 void main() {
@@ -9,5 +10,7 @@ void main() {
   // todo: Initialize Fire Base
   // todo: Initialize Authentication
   runApp(const App());
+
+  EColors.linearGradient;
 }
 
