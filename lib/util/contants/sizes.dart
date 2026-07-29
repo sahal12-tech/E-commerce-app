@@ -52,7 +52,7 @@ class ESizes {
 
   static const double productImageSize = 120.0;
   static const double productImageRadius = 16.0;
-  static const double productImageheight = 160.0;
+  static const double productImageHeight = 160.0;
 
   //input field
 
@@ -60,6 +60,19 @@ class ESizes {
   static const double spaceBtwInputFields = 16.0;
 
   //card size
+  static const double cardRadiusLg = 16.0;
+  static const double cardRadiusMd = 12.0;
+  static const double cardRadiusSm = 10.0;
+  static const double cardRadiusXs = 6.0;
+  static const double cardElevation = 2.0;
 
+  //Image Carousel Height
 
+  static const double imageCarouselHeight = 200.0;
+
+  //loading Indicator Size
+  static const double loadingIndicatorSize = 36.0;
+
+  //Grid View spacing
+  static const double gridViewSpacing = 16.0;
 }
