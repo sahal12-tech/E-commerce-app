@@ -40,5 +40,3 @@ class EFormatters{
     return formatPakistaniPhoneNumber(input) != null;
   }
 }
-
-
