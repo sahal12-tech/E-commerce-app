@@ -23,7 +23,7 @@ class EDeviceUtils {
     return viewInsets.bottom == 0;
   }
 
-  static bool isPotraitOrientation(BuildContext context) {
+  static bool isPortraitOrientation(BuildContext context) {
     final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom != 0;
   }
