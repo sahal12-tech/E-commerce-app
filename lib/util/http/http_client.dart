@@ -13,7 +13,7 @@ class EHttpHelper {
   //Helper method to make a POST request
 
   static Future<Map<String, dynamic>> post(String endpoint, dynamic data) async {
-    final Response = await http.post(
+    final response = await http.post(
       Uri.parse('$_baseUrl/$endpoint'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(data),
