@@ -17,5 +17,6 @@ class ETexts{
   static const String homeAppBarTitle = "Shop. Smile. Repeat.";
   static const String homeAppBarSubTitle = "Sahal Ansari";
 
-
+  static const String LoginTitle = "Welcome Back";
+  static const String LoginSubTitle = "Shop. Smile. Repeat.";
 }
