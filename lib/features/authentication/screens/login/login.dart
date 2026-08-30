@@ -114,53 +114,75 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
               ///divider
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Flexible(child: Divider(color: dark ? EColors.darkGrey : EColors.grey, thickness: 0.5 , indent: 60, endIndent: 5)),
-                  Text(ETexts.orSignInWith.capitalize!, style: Theme.of(context).textTheme.bodyMedium,),
-                  Flexible(child: Divider(color: dark ? EColors.darkGrey : EColors.grey, thickness: 0.5 , indent: 5, endIndent: 60)),
+                  Flexible(
+                    child: Divider(
+                      color: dark ? EColors.darkGrey : EColors.grey,
+                      thickness: 0.5,
+                      indent: 60,
+                      endIndent: 5,
+                    ),
+                  ),
+                  Text(
+                    ETexts.orSignInWith.capitalize!,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  Flexible(
+                    child: Divider(
+                      color: dark ? EColors.darkGrey : EColors.grey,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 60,
+                    ),
+                  ),
                 ],
               ),
 
               const SizedBox(height: ESizes.spaceBtwSections),
 
-
               ///Footer Social Login Buttons
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: dark ? EColors.darkGrey : EColors.grey),
-                      borderRadius: BorderRadius.circular(100)
+                      border: Border.all(
+                        color: dark ? EColors.darkGrey : EColors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(100),
                     ),
-                    child: IconButton(onPressed: (){},
-                        icon: const Image(
-                            height: ESizes.iconLg,
-                            width: ESizes.iconLg,
-                            image: AssetImage(EImages.google),
-                        )
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        height: ESizes.iconLg,
+                        width: ESizes.iconLg,
+                        image: AssetImage(EImages.google),
+                      ),
                     ),
                   ),
                   const SizedBox(width: ESizes.spaceBtwIcons),
                   Container(
                     decoration: BoxDecoration(
-                        border: Border.all(color: dark ? EColors.darkGrey : EColors.grey),
-                        borderRadius: BorderRadius.circular(100)
+                      border: Border.all(
+                        color: dark ? EColors.darkGrey : EColors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(100),
                     ),
-                    child: IconButton(onPressed: (){},
-                        icon: const Image(
-                          height: ESizes.iconLg,
-                          width: ESizes.iconLg,
-                          image: AssetImage(EImages.facebook),
-                        )
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        height: ESizes.iconLg,
+                        width: ESizes.iconLg,
+                        image: AssetImage(EImages.facebook),
+                      ),
                     ),
-                  )
-                ]
-              )
+                  ),
+                ],
+              ),
             ],
           ),
         ),
