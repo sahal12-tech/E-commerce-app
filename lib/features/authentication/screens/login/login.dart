@@ -29,9 +29,9 @@ class LoginScreen extends StatelessWidget {
                     height: 150,
                     image: AssetImage(dark ? EImages.lightAppLogo : EImages.darkAppLogo),
                   ),
-                  Text(ETexts.LoginTitle, style: Theme.of(context).textTheme.headlineMedium),
+                  Text(ETexts.loginTitle, style: Theme.of(context).textTheme.headlineMedium),
                   const SizedBox(height: ESizes.sm),
-                  Text(ETexts.LoginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
+                  Text(ETexts.loginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
 
@@ -43,6 +43,16 @@ class LoginScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       prefixIcon: Icon(Iconsax.direct_right),
                       labelText: ETexts.email
+                    ),
+                  ),
+
+                  const SizedBox(height: ESizes.spaceBtwInputFields,),
+
+                  TextFormField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Iconsax.password_check),
+                        labelText: ETexts.password,
+                        suffixIcon: Icon(Iconsax.eye)
                     ),
                   )
                 ],
