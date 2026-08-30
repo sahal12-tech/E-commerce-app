@@ -43,6 +43,7 @@ class LoginScreen extends StatelessWidget {
                     ///Email
                     TextFormField(
                       decoration: InputDecoration(
+
                         prefixIcon: Icon(Iconsax.direct_right),
                         labelText: ETexts.email
                       ),
@@ -52,6 +53,7 @@ class LoginScreen extends StatelessWidget {
 
                     TextFormField(
                       decoration: InputDecoration(
+
                           prefixIcon: Icon(Iconsax.password_check),
                           labelText: ETexts.password,
                           suffixIcon: Icon(Iconsax.eye_slash)
