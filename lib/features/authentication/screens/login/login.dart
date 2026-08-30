@@ -81,6 +81,8 @@ class LoginScreen extends StatelessWidget {
                         ElevatedButton(onPressed: (){}, child: Text(ETexts.signIn))
                     ),
 
+                    const SizedBox(height: ESizes.spaceBtwSections,),
+
                     ///Create Account Button
                     SizedBox( width: double.infinity,
                         child:
