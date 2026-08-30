@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/util/contants/text_strings.dart';
+import 'package:iconsax/iconsax.dart';
 import '../../../../common/styles/ESpacingStyle.dart';
 import '../../../../util/contants/image_strings.dart';
 import '../../../../util/contants/sizes.dart';
@@ -32,7 +33,22 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: ESizes.sm),
                   Text(ETexts.LoginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
                 ],
+              ),
+
+              /// Login Form
+              Form(child: Column(
+                children: [
+                  ///Email
+                  TextFormField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Iconsax.direct_right),
+                      labelText: ETexts.email
+                    ),
+                  )
+                ],
+              ),
               )
+
             ],
           ),
         )

@@ -19,4 +19,8 @@ class ETexts{
 
   static const String LoginTitle = "Welcome Back";
   static const String LoginSubTitle = "Shop. Smile. Repeat.";
+
+  //authentication Text
+
+  static const String email = "Email";
 }
