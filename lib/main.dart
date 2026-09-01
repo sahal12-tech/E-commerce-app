@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catelog_page/util/contants/colors.dart';
+import 'package:flutter_catelog_page/util/constants/colors.dart';
 import 'app.dart';
 
 void main() {

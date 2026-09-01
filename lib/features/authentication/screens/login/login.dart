@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catelog_page/util/contants/text_strings.dart';
+import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../common/styles/ESpacingStyle.dart';
-import '../../../../util/contants/colors.dart';
-import '../../../../util/contants/image_strings.dart';
-import '../../../../util/contants/sizes.dart';
+import '../../../../util/constants/colors.dart';
+import '../../../../util/constants/image_strings.dart';
+import '../../../../util/constants/sizes.dart';
 import '../../../../util/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
