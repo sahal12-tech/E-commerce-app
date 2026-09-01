@@ -38,6 +38,7 @@ class ESizes {
   static const double defaultSpace = 24.0;
   static const double spaceBtwIcons = 16.0;
   static const double spaceBtwSections = 32.0;
+  static const double spaceBtwitems = 12.0;
 
   //border radius
   static const double borderRadiusSm = 4.0;
