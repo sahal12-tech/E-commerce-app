@@ -5,6 +5,7 @@ import '../../../../common/widgets/login_signup/ESocialLogin.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../util/constants/sizes.dart';
 import '../../../../util/constants/text_strings.dart';
+import '../../../../../common/styles/ESpacingStyle.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,19 +15,22 @@ class LoginScreen extends StatelessWidget {
 
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            /// Logo, Title and SubTitle
-            const ELoginHeader(),
-            /// Login Form
-            const ELoginForm(),
-            ///divider
-            const FormDivider(dividerText: ETexts.orSignUpWith),
+        child: Padding(
+          padding: ESpacingStyle.paddingWithAppBarHeight,
+          child: Column(
+            children: [
+              /// Logo, Title and SubTitle
+              const ELoginHeader(),
+              /// Login Form
+              const ELoginForm(),
+              ///divider
+              const FormDivider(dividerText: ETexts.orSignUpWith),
 
-            const SizedBox(height: ESizes.spaceBtwSections),
-            ///Footer Social Login Buttons
-            const ESocialLogin(),
-          ],
+              const SizedBox(height: ESizes.spaceBtwSections),
+              ///Footer Social Login Buttons
+              const ESocialLogin(),
+            ],
+          ),
         ),
       ),
     );
