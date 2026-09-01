@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -22,26 +23,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               /// Logo, Title and SubTitle
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    height: 150,
-                    image: AssetImage(
-                      dark ? EImages.lightAppLogo : EImages.darkAppLogo,
-                    ),
-                  ),
-                  Text(
-                    ETexts.loginTitle,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(height: ESizes.sm),
-                  Text(
-                    ETexts.loginSubTitle,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
-              ),
+              const ELoginHeader(),
 
               /// Login Form
               Padding(
