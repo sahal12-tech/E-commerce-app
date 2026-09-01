@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:flutter_catelog_page/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:flutter_catelog_page/util/constants/text_strings.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import '../../../../common/styles/ESpacingStyle.dart';
+import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../util/constants/colors.dart';
 import '../../../../util/constants/image_strings.dart';
 import '../../../../util/constants/sizes.dart';
+import '../../../../util/constants/text_strings.dart';
 import '../../../../util/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -36,31 +35,7 @@ class LoginScreen extends StatelessWidget {
               ),
 
               ///divider
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Flexible(
-                    child: Divider(
-                      color: dark ? EColors.darkGrey : EColors.grey,
-                      thickness: 0.5,
-                      indent: 60,
-                      endIndent: 5,
-                    ),
-                  ),
-                  Text(
-                    ETexts.orSignInWith.capitalize!,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  Flexible(
-                    child: Divider(
-                      color: dark ? EColors.darkGrey : EColors.grey,
-                      thickness: 0.5,
-                      indent: 5,
-                      endIndent: 60,
-                    ),
-                  ),
-                ],
-              ),
+              const FormDivider(dividerText: ETexts.orSignUpWith),
 
               const SizedBox(height: ESizes.spaceBtwSections),
 
@@ -110,4 +85,5 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
 
