@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/common/widgets/login_signup/form_divider.dart';
+import 'package:flutter_catelog_page/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter_catelog_page/features/authentication/screens/signup/widgets/SignupForm.dart';
 import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import '../../../../../common/widgets/login_signup/ESocialLogin.dart';
 
 
@@ -36,7 +39,7 @@ class SignupScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=> const VerifyEmailScreen()),
                   child: Text(ETexts.createAccount),
                 ),
               ),

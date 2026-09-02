@@ -14,7 +14,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  #flutter svg
+  flutter_svg: ^2.0.10
   # utility packages
   http: ^1.6.0
   intl: ^0.20.3
@@ -50,6 +51,7 @@ flutter:
     - assets/Videos/
     - assets/fonts/
     - assets/logos/
+    - assets/Images/Animations/
 
   fonts:
     - family: Poppins
