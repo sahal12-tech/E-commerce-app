@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/common/widgets/login_signup/form_divider.dart';
 import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../common/widgets/login_signup/ESocialLogin.dart';
 import '../../../../../util/constants/colors.dart';
 import '../../../../../util/helpers/helper_functions.dart';
 
@@ -152,6 +154,27 @@ class SignupScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              const SizedBox(height: ESizes.spaceBtwSections),
+
+              ///Create Account Button
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: Text(ETexts.createAccount),
+                ),
+              ),
+
+              const SizedBox(height: ESizes.spaceBtwSections),
+
+              ///Divider
+              const FormDivider(dividerText: ETexts.orSignUpWith),
+
+              const SizedBox(height: ESizes.spaceBtwSections),
+
+              /// Social Sign_up button
+              const ESocialLogin(),
             ],
           ),
         ),
