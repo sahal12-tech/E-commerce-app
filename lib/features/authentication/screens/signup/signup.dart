@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/common/widgets/login_signup/form_divider.dart';
+import 'package:flutter_catelog_page/features/authentication/screens/signup/widgets/SignupForm.dart';
 import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import '../../../../../common/widgets/login_signup/ESocialLogin.dart';
-import 'SignupForm.dart';
+
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

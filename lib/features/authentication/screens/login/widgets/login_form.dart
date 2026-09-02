@@ -4,7 +4,7 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../../util/constants/sizes.dart';
 import '../../../../../util/constants/text_strings.dart';
-import '../../signup/widgets/signup.dart';
+import '../../signup/signup.dart';
 
 class ELoginForm extends StatelessWidget {
   const ELoginForm({
