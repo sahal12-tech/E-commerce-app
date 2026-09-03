@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_catelog_page/features/authentication/screens/login/login.dart';
-import 'package:flutter_catelog_page/features/authentication/screens/signup/successScreen.dart';
-import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import '../../../../util/constants/colors.dart';
 import '../../../../util/constants/sizes.dart';
+import '../../../../util/constants/text_strings.dart';
 import '../../../../util/helpers/helper_functions.dart';
+import '../login/login.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class SuccessScreen extends StatelessWidget {
+  const SuccessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +26,12 @@ class VerifyEmailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(ESizes.defaultSpace),
+          padding: const EdgeInsets.all(ESizes.appBarHeight),
           child: Column(
             children: [
-              ///Image Svg
               Center(
                 child: SvgPicture.asset(
-                  'assets/Images/Animations/verify_email.svg',
+                  'assets/Images/Animations/success_screen.svg',
                   width: EHelperFunctions.screenWidth() * 0.6,
                   colorFilter: ColorFilter.mode(
                     Theme.of(context).brightness == Brightness.dark
@@ -46,43 +45,27 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
               const SizedBox(height: ESizes.spaceBtwSections),
 
-              ///Title and SubTitle
               Text(
-                ETexts.confirmEmail,
+                ETexts.yourAccountCreatedTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
+
               const SizedBox(height: ESizes.spaceBtwitems),
 
               Text(
-                'support@e-commerceApp.com',
-                style: Theme.of(context).textTheme.labelLarge,
+                ETexts.yourAccountCreatedSubTitle,
+                style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: ESizes.spaceBtwitems),
-
-              Text(
-                ETexts.confirmEmailSubTitle,
-                style: Theme.of(context).textTheme.bodyMedium,
               ),
 
               const SizedBox(height: ESizes.spaceBtwSections),
 
-              ///Buttons
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const SuccessScreen()),
+                  onPressed: () => Get.offAll(() => const LoginScreen()),
                   child: const Text(ETexts.EContinue),
-                ),
-              ),
-              const SizedBox(height: ESizes.spaceBtwitems),
-
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(ETexts.resendEmail),
                 ),
               ),
             ],
