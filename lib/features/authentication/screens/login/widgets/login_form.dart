@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../../util/constants/sizes.dart';
 import '../../../../../util/constants/text_strings.dart';
+import '../../password_configuration/forget_password.dart';
 import '../../signup/signup.dart';
 
 class ELoginForm extends StatelessWidget {
@@ -53,7 +54,7 @@ class ELoginForm extends StatelessWidget {
 
                 ///Forgot Password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: Text(ETexts.forgetPassword),
                 ),
               ],

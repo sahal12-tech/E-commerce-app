@@ -4,6 +4,8 @@ class ETexts {
   static const String submit = "Submit";
   static const String appName = "T-Store";
   static const String EContinue = "Continue";
+  static const String done = "Done";
+
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
