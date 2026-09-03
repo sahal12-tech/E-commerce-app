@@ -5,7 +5,6 @@ import 'package:flutter_catelog_page/features/authentication/screens/signup/succ
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../../../../util/constants/colors.dart';
 import '../../../../util/constants/sizes.dart';
 import '../../../../util/helpers/helper_functions.dart';
 
@@ -34,14 +33,6 @@ class VerifyEmailScreen extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/Images/Animations/verify_email.svg',
                   width: EHelperFunctions.screenWidth() * 0.6,
-                  colorFilter: ColorFilter.mode(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? EColors
-                              .accent // Lighter tint for dark mode
-                        : EColors.primary,
-                    // Darker tint for light mode[cite: 1]
-                    BlendMode.srcIn,
-                  ),
                 ),
               ),
               const SizedBox(height: ESizes.spaceBtwSections),

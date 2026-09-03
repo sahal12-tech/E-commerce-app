@@ -33,14 +33,6 @@ class SuccessScreen extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/Images/Animations/success_screen.svg',
                   width: EHelperFunctions.screenWidth() * 0.6,
-                  colorFilter: ColorFilter.mode(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? EColors
-                              .accent // Lighter tint for dark mode
-                        : EColors.primary,
-                    // Darker tint for light mode[cite: 1]
-                    BlendMode.srcIn,
-                  ),
                 ),
               ),
               const SizedBox(height: ESizes.spaceBtwSections),

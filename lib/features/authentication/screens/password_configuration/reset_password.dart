@@ -32,14 +32,6 @@ class ResetPassword extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/Images/Animations/verify_email.svg',
                   width: EHelperFunctions.screenWidth() * 0.6,
-                  colorFilter: ColorFilter.mode(
-                    Theme.of(context).brightness == Brightness.dark
-                        ? EColors
-                              .accent // Lighter tint for dark mode
-                        : EColors.primary,
-                    // Darker tint for light mode[cite: 1]
-                    BlendMode.srcIn,
-                  ),
                 ),
               ),
               const SizedBox(height: ESizes.spaceBtwSections),
@@ -64,6 +56,7 @@ class ResetPassword extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(ETexts.done),
+
                 ),
               ),
               const SizedBox(height: ESizes.spaceBtwitems,),

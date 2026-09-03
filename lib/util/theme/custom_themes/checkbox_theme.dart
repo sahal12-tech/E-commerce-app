@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/colors.dart';
+
 ///custom class for light & dark text theme
 class ECheckboxTheme {
   ECheckboxTheme._(); // to avoid creating instance
@@ -16,7 +18,7 @@ class ECheckboxTheme {
     }),
     fillColor: WidgetStateColor.resolveWith((state){
       if(state.contains(WidgetState.selected)){
-        return Colors.blue;
+        return EColors.primary;
       }
       else {
         return Colors.transparent;
@@ -36,7 +38,7 @@ class ECheckboxTheme {
     }),
     fillColor: WidgetStateColor.resolveWith((state){
       if(state.contains(WidgetState.selected)){
-        return Colors.blue;
+        return EColors.primary;
       }
       else {
         return Colors.transparent;
