@@ -12,29 +12,27 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
-        child: Padding(
-          padding: ESpacingStyle.paddingWithAppBarHeight,
-          child: Column(
-            children: [
-              /// Logo, Title and SubTitle
-              const ELoginHeader(),
-              /// Login Form
-              const ELoginForm(),
-              ///divider
-              const FormDivider(dividerText: ETexts.orSignUpWith),
+          child: Padding(
+            padding: EdgeInsets.all(ESizes.defaultSpace),
+            child: Column(
+              children: [
+                /// Logo, Title and SubTitle
+                const ELoginHeader(),
+                /// Login Form
+                const ELoginForm(),
+                ///divider
+                const FormDivider(dividerText: ETexts.orSignUpWith),
 
-              const SizedBox(height: ESizes.spaceBtwSections),
-              ///Footer Social Login Buttons
-              const ESocialLogin(),
-            ],
+                const SizedBox(height: ESizes.spaceBtwSections),
+                ///Footer Social Login Buttons
+                const ESocialLogin(),
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
-
-

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../../../navigation_menu.dart';
 import '../../../../../util/constants/sizes.dart';
 import '../../../../../util/constants/text_strings.dart';
 import '../../password_configuration/forget_password.dart';
@@ -65,7 +66,7 @@ class ELoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const NavigationMenu()) ,
                 child: Text(ETexts.signIn),
               ),
             ),

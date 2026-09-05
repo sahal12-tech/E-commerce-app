@@ -1,8 +1,7 @@
 class EImages{
   //app logos
-
-  static const String darkAppLogo = "assets/logos/E-store-splash-screen-dark.png";
-  static const  String lightAppLogo = "assets/logos/E-store-splash-screen-light.png";
+  static const String darkAppLogo = "assets/logos/applogo-dark.svg";
+  static const  String lightAppLogo = "assets/logos/applogo-light.svg";
 
   //social logos
   static const String google = "assets/logos/google-icon.png";

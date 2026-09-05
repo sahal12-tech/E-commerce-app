@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/util/constants/text_strings.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../util/constants/image_strings.dart';
 import '../../../../../util/constants/sizes.dart';
 import '../../../../../util/helpers/helper_functions.dart';
@@ -13,15 +14,14 @@ class ELoginHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isdarkMode(context);
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image(
-          height: 150,
-          image: AssetImage(
-            dark ? EImages.lightAppLogo : EImages.darkAppLogo,
-          ),
+        SvgPicture.asset(
+          dark ? EImages.darkAppLogo : EImages.lightAppLogo,
+          //height: EHelperFunctions.screenHeight() * 0.2, // Adjust height as needed
+          height: 200,
         ),
-        const SizedBox(height: ESizes.sm),
+        //const SizedBox(height: ESizes.sm),
         Text(
           ETexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,

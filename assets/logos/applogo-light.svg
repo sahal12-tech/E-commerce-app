@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Light Theme Bag Gradient -->
+    <linearGradient id="bagGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B93FF"/>
+      <stop offset="50%" stop-color="#4B68FF"/>
+      <stop offset="100%" stop-color="#1E38C8"/>
+    </linearGradient>
+
+    <!-- Light Theme Handle Gradient -->
+    <linearGradient id="handleGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A1B2FF"/>
+      <stop offset="60%" stop-color="#4B68FF"/>
+      <stop offset="100%" stop-color="#142696"/>
+    </linearGradient>
+
+    <!-- Tag Gradient -->
+    <linearGradient id="tagGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B68FF"/>
+      <stop offset="100%" stop-color="#1A2EB3"/>
+    </linearGradient>
+
+    <!-- Top Gloss Overlay -->
+    <linearGradient id="glossGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- Handle -->
+    <path d="M 195,190 A 55,55 0 0,1 305,190" 
+          fill="none" 
+          stroke="url(#handleGradLight)" 
+          stroke-width="26" 
+          stroke-linecap="round"/>
+
+    <!-- Handle Inner Highlight -->
+    <path d="M 195,190 A 55,55 0 0,1 305,190" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          opacity="0.3"/>
+
+    <!-- Tag String -->
+    <path d="M 335,225 C 365,235 375,255 370,270" 
+          fill="none" 
+          stroke="#2A42CC" 
+          stroke-width="5" 
+          stroke-linecap="round"/>
+
+    <!-- Tag -->
+    <g transform="rotate(32 375 270)">
+      <path d="M 355,245 L 390,245 A 10,10 0 0,1 397,248 L 420,275 A 10,10 0 0,1 420,289 L 395,314 A 10,10 0 0,1 381,314 L 355,288 A 10,10 0 0,1 352,281 L 352,252 A 7,7 0 0,1 355,245 Z" 
+            fill="url(#tagGradLight)"/>
+      <circle cx="367" cy="262" r="6" fill="#0D1966" opacity="0.6"/>
+      <circle cx="367" cy="262" r="5" fill="#081045"/>
+    </g>
+
+    <!-- Main Bag Body -->
+    <path d="M 170,175 
+             L 330,175 
+             C 348,175 358,187 362,203 
+             L 380,355 
+             C 383,375 370,388 350,388 
+             L 150,388 
+             C 130,388 117,375 120,355 
+             L 138,203 
+             C 142,187 152,175 170,175 Z" 
+          fill="url(#bagGradLight)"/>
+
+    <!-- Gloss Highlight -->
+    <path d="M 170,175 
+             L 330,175 
+             C 348,175 358,187 362,203 
+             L 371,280 
+             C 270,260 230,310 129,280 
+             L 138,203 
+             C 142,187 152,175 170,175 Z" 
+          fill="url(#glossGradLight)" 
+          opacity="0.25"/>
+
+    <!-- 'D' Graphic Cutout -->
+    <path d="M 198,225 
+             L 248,225 
+             C 285,225 308,245 308,280 
+             C 308,315 285,335 248,335 
+             L 198,335 
+             Z 
+             M 224,250 
+             L 224,310 
+             L 246,310 
+             C 268,310 281,298 281,280 
+             C 281,262 268,250 246,250 
+             Z" 
+          fill="#FFFFFF" 
+          fill-rule="evenodd"/>
+  </g>
+</svg>
