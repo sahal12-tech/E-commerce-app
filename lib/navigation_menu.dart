@@ -26,7 +26,7 @@ class NavigationMenu extends StatelessWidget {
       ),
       bottomNavigationBar: Obx(
         () => NavigationBar(
-          height: 80,
+          height: 60,
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
