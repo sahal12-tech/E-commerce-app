@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import 'features/authentication/screens/login/login.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -9,6 +12,15 @@ class NavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyActions: false,
+        actions: [
+          IconButton(
+            onPressed: () => Get.offAll(() => const LoginScreen()),
+            icon: const Icon(CupertinoIcons.clear),
+          ),
+        ],
+      ),
       bottomNavigationBar: Obx(
         () => NavigationBar(
           height: 80,
