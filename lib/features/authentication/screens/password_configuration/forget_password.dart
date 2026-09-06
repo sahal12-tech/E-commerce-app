@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../../util/constants/sizes.dart';
 import '../../../../util/constants/text_strings.dart';
+import '../login/login.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -12,7 +13,15 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        automaticallyImplyActions: false,
+        actions: [
+          IconButton(
+            onPressed: () => Get.offAll(() => const LoginScreen()),
+            icon: const Icon(CupertinoIcons.clear),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(ESizes.defaultSpace),
         child: Column(
