@@ -32,7 +32,7 @@ class EApptheme{
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
-    brightness: Brightness.light,
+    brightness: Brightness.dark,
     primaryColor: EColors.primary,
     scaffoldBackgroundColor: Colors.black,
     textTheme: ETextTheme.darkTextTheme,

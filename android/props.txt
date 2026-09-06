@@ -1,0 +1,198 @@
+
+> Configure project :gradle
+WARNING: Unsupported Kotlin plugin version.
+The `embedded-kotlin` and `kotlin-dsl` plugins rely on features of Kotlin `2.2.0` that might work differently than in the requested version `2.2.20`.
+
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+w: [33m[1mDeprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :jni
+w: [33m[1mDeprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':jni' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :jni_flutter
+w: [33m[1mDeprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':jni_flutter' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :url_launcher_android
+w: [33m[1mDeprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':url_launcher_android' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Task :app:properties
+
+------------------------------------------------------------
+Project ':app'
+------------------------------------------------------------
+
+_agp_internal_DesugarLibConfigExtractor_registered: true
+_kgp_internal_kotlin_compile_transforms_registered: true
+allprojects: [project ':app']
+android: extension 'android'
+android.builtInKotlin: false
+android.newDsl: false
+android.useAndroidX: true
+androidComponents: extension 'androidComponents'
+ant: org.gradle.api.internal.project.DefaultAntBuilder@4a6a0d6d
+antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@623a11be
+artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@50894ea
+asDynamicObject: DynamicObject for project ':app'
+assembleDebug: task ':app:assembleDebug'
+assembleProfile: task ':app:assembleProfile'
+assembleRelease: task ':app:assembleRelease'
+base: extension 'base'
+baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@4125aa89
+buildDir: D:\Android Development\E-commerce app\E-commerce app\build\app
+buildFile: D:\Android Development\E-commerce app\E-commerce app\android\app\build.gradle.kts
+buildOutputs: BaseVariantOutput container
+buildPath: :
+buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@10295355
+buildTreePath: :app
+buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler_Decorated@ab22558
+childProjects: {}
+childProjectsUnchecked: {}
+class: class org.gradle.api.internal.project.DefaultProject_Decorated
+classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@593ef716
+clean: task ':app:clean'
+compileFlutterBuildDebug: task ':app:compileFlutterBuildDebug'
+compileFlutterBuildProfile: task ':app:compileFlutterBuildProfile'
+compileFlutterBuildRelease: task ':app:compileFlutterBuildRelease'
+components: SoftwareComponent container
+configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@38b77251
+configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@79590e69
+configurations: configuration container for project ':app'
+copyFlutterAssetsDebug: task ':app:copyFlutterAssetsDebug'
+copyFlutterAssetsProfile: task ':app:copyFlutterAssetsProfile'
+copyFlutterAssetsRelease: task ':app:copyFlutterAssetsRelease'
+crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@233059ec
+defaultTasks: []
+deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@38332037
+dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@3b15e89a
+dependencyFactory: org.gradle.api.internal.artifacts.DefaultDependencyFactory@a0e93d7
+dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@2b504443
+depth: 1
+description: null
+detachedState: false
+displayName: project ':app'
+ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@a43eb86
+extensions: org.gradle.internal.extensibility.DefaultExtensionContainer@1e06836c
+fileOperations: org.gradle.api.internal.file.DefaultFileOperations@60683b50
+fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@49b30942
+flutter: extension 'flutter'
+generateDebugRFile: task ':app:generateDebugRFile'
+generateProfileRFile: task ':app:generateProfileRFile'
+generateReleaseRFile: task ':app:generateReleaseRFile'
+gradle: build 'android'
+group: android
+identityPath: :app
+inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@5cb9c429
+internalStatus: property(java.lang.Object, fixed(class java.lang.String, integration))
+isolated: DefaultIsolatedProject{project ':app'}
+java: extension 'java'
+javaToolchains: extension 'javaToolchains'
+kotlin: extension 'kotlin'
+kotlin.incremental: false
+kotlin.plugin.loaded.in.projects.2.3.20: :app
+kotlin.properties.provider: org.jetbrains.kotlin.gradle.plugin.PropertiesProvider@579d360b
+kotlinTestRegistry: org.jetbrains.kotlin.gradle.testing.internal.KotlinTestsRegistry@6b5cca3
+layout: org.gradle.api.internal.file.DefaultProjectLayout@14bfd8d0
+lifecycleActionsState: null
+lintLifecycle: extension 'lintLifecycle'
+listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@13bf74cf
+logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@5c4aa245
+logging: org.gradle.internal.logging.services.DefaultLoggingManager@2dac25dd
+mergeDebugAssets: task ':app:mergeDebugAssets'
+mergeProfileAssets: task ':app:mergeProfileAssets'
+mergeReleaseAssets: task ':app:mergeReleaseAssets'
+model: project ':app'
+modelIdentityDisplayName: null
+modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@5d4341f
+name: app
+nativePluginLoader: Native_plugin_loader_gradle$NativePluginLoader@6fc7152d
+normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@7b60d16
+objects: org.gradle.api.internal.model.DefaultObjectFactory@4bf842f0
+org.gradle.jvmargs: -Xmx8G -XX:MaxMetaspaceSize=4G -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError
+org.jetbrains.kotlin.gradle.utils.SingleActionPerProject: org.jetbrains.kotlin.gradle.utils.SingleAction$PerformedActions@6f28e35c
+org.jetbrains.kotlin.gradle.utils.StoredPropertyStorage: org.jetbrains.kotlin.gradle.utils.StoredPropertyStorage@3811fde9
+owner: project ':app'
+parent: root project 'android'
+parentIdentifier: root project 'android'
+path: :app
+pluginContext: false
+pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@f789940
+plugins: Plugin collection
+processOperations: org.gradle.process.internal.DefaultExecActionFactory@69ea59d
+project: project ':app'
+projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@2e848411
+projectDir: D:\Android Development\E-commerce app\E-commerce app\android\app
+projectEvaluationBroadcaster: ProjectEvaluationListener broadcast
+projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@19cdda9d
+projectIdentity: project :app
+projectPath: :app
+properties: {...}
+providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@5234f27d
+reporting: extension 'reporting'
+repositories: repository container
+resources: org.gradle.api.internal.resources.DefaultResourceHandler@21f507eb
+rootDir: D:\Android Development\E-commerce app\E-commerce app\android
+rootProject: root project 'android'
+rootScript: false
+script: false
+scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@2bdbabc8
+scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@5cb5951c
+serviceRegistryFactory: org.gradle.internal.service.scopes.BuildScopeServiceRegistryFactory@29e733ed
+services: project services
+sourceSets: SourceSet container
+standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@2dac25dd
+state: project state 'EXECUTED'
+status: integration
+subprojects: []
+taskDependencyFactory: org.gradle.api.internal.tasks.DefaultTaskDependencyFactory@20a4a365
+taskThatOwnsThisObject: null
+tasks: task set
+usesUnsupportedDependencyVersions: false
+version: unspecified
+versionCatalogs: extension 'versionCatalogs'
+
+[Incubating] Problems report is available at: file:///D:/Android%20Development/E-commerce%20app/E-commerce%20app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2s
+5 actionable tasks: 1 executed, 4 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html
