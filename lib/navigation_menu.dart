@@ -15,15 +15,15 @@ class NavigationMenu extends StatelessWidget {
     final controller = Get.put(NavigationController());
     final darkMode = EHelperFunctions.isdarkMode(context);
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyActions: false,
-        actions: [
-          IconButton(
-            onPressed: () => Get.offAll(() => const LoginScreen()),
-            icon: const Icon(CupertinoIcons.clear),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   automaticallyImplyActions: false,
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () => Get.offAll(() => const LoginScreen()),
+      //       icon: const Icon(CupertinoIcons.clear),
+      //     ),
+      //   ],
+      // ),
       bottomNavigationBar: Obx(
         () => NavigationBar(
           height: 60,
