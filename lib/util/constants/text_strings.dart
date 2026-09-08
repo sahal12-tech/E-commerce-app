@@ -50,4 +50,12 @@ class ETexts {
   static const String verificationCode = "verificationCode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+
+  //App Bar
+
+  static const String homeAppbarTitle = "Discover. Shop. Repeat.";
+  static const String homeAppbarSubTitle = "Sahal Ansari";
+
+
+
 }
