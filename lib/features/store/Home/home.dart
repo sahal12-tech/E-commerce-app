@@ -20,8 +20,8 @@ class HomeScreen extends StatelessWidget {
                     height: 400,
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(400),
-                        color: EColors.textWhite.withValues(alpha: 0.1)
+                      borderRadius: BorderRadius.circular(400),
+                      color: EColors.textWhite.withValues(alpha: 0.1),
                     ),
                   ),
                   Container(
@@ -29,13 +29,13 @@ class HomeScreen extends StatelessWidget {
                     height: 400,
                     padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(400),
-                        color: EColors.textWhite.withValues(alpha: 0.1)
+                      borderRadius: BorderRadius.circular(400),
+                      color: EColors.textWhite.withValues(alpha: 0.1),
                     ),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
