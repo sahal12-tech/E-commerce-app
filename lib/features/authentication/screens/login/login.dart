@@ -5,7 +5,6 @@ import '../../../../common/widgets/login_signup/ESocialLogin.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../util/constants/sizes.dart';
 import '../../../../util/constants/text_strings.dart';
-import '../../../../../common/styles/ESpacingStyle.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
