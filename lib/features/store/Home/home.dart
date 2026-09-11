@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catelog_page/common/widgets/AppBar/appbar.dart';
-import 'package:flutter_catelog_page/util/constants/colors.dart';
-import 'package:flutter_catelog_page/util/constants/text_strings.dart';
+import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
 import '../../../common/widgets/custom_shape/containers/EPrimary_Header_Container.dart';
-import '../../../common/widgets/products/cart/cart_menu_icon.dart';
+import '../../../common/widgets/custom_shape/containers/ESearchContainer.dart';
+import '../../../common/widgets/texts/section_heading.dart';
+import '../../../util/constants/colors.dart';
+import '../../../util/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,28 +18,26 @@ class HomeScreen extends StatelessWidget {
             EPrimary_Header_Container(
               child: Column(
                 children: [
-                  EAppBar(
-                    showBackArrow: false,
-                    title: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  ///AppBar
+                  EHomeAppBar(),
+                  SizedBox(height: ESizes.defaultSpace),
+                  ///Search Bar
+                  ESearchContainer(
+                    text: 'Search in Store',
+                  ),
+                  SizedBox(height: ESizes.spaceBtwSections,),
+                  ///Categories
+                  Padding(
+                    padding: const EdgeInsets.only(left : ESizes.defaultSpace),
+                    child: Column(
                       children: [
-                        Text(
-                          ETexts.homeAppbarTitle,
-                          style: Theme.of(
-                            context,
-                          ).textTheme.labelMedium!.apply(color: EColors.grey),
-                        ),
-                        Text(
-                          ETexts.homeAppbarSubTitle,
-                          style: Theme.of(
-                            context,
-                          ).textTheme.headlineMedium!.apply(color: EColors.white),
+                        ESectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: EColors.white,
                         ),
                       ],
                     ),
-                    actions: [
-                      ECartCounterIcon(count: 3),
-                    ],
                   ),
                 ],
               ),
