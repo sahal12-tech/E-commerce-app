@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../../common/widgets/AppBar/appbar.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../util/constants/colors.dart';
-import '../../../../util/constants/sizes.dart';
 import '../../../../util/constants/text_strings.dart';
 
 class EHomeAppBar extends StatelessWidget {

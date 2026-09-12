@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
+import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
 import '../../../common/widgets/custom_shape/containers/EPrimary_Header_Container.dart';
 import '../../../common/widgets/custom_shape/containers/ESearchContainer.dart';
+import '../../../common/widgets/image_text_widget/vertical_image_text.dart';
 import '../../../common/widgets/texts/section_heading.dart';
 import '../../../util/constants/colors.dart';
+import '../../../util/constants/image_strings.dart';
 import '../../../util/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,14 +24,14 @@ class HomeScreen extends StatelessWidget {
                   ///AppBar
                   EHomeAppBar(),
                   SizedBox(height: ESizes.defaultSpace),
+
                   ///Search Bar
-                  ESearchContainer(
-                    text: 'Search in Store',
-                  ),
-                  SizedBox(height: ESizes.spaceBtwSections,),
+                  ESearchContainer(text: 'Search in Store'),
+                  SizedBox(height: ESizes.spaceBtwSections),
+
                   ///Categories
                   Padding(
-                    padding: const EdgeInsets.only(left : ESizes.defaultSpace),
+                    padding: const EdgeInsets.only(left: ESizes.defaultSpace),
                     child: Column(
                       children: [
                         ESectionHeading(
@@ -36,6 +39,10 @@ class HomeScreen extends StatelessWidget {
                           showActionButton: false,
                           textColor: EColors.white,
                         ),
+                        SizedBox(height: ESizes.spaceBtwSections),
+
+                        //Categories scrollable  list view
+                        homeCategories(),
                       ],
                     ),
                   ),
@@ -48,3 +55,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
