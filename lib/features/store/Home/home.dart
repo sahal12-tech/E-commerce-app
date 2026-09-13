@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/common/widgets/products/products_card/product_card_vertical.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EPromoCarousalSlider.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/home_categories.dart';
@@ -57,6 +58,10 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   EPromeCarousalSlider(controller: controller),
+
+                  //Vertical product card
+
+                  EProductCardVertical()
                 ],
               ),
             ),
