@@ -18,4 +18,10 @@ class EImages{
   static const String electronicsIcon = "assets/Icons/Categories_Icons/icons8-iphone-17-pro-100.png";
   static const String jewelryIcon = "assets/Icons/Categories_Icons/icons8-jewelry-100.png";
 
+  //--banners
+  static const String banner_1 = "assets/Images/banners/Fashion-banner-1.png";
+  static const String banner_2 = "assets/Images/banners/tech-deals-banner-2.png";
+  static const String banner_3 = "assets/Images/banners/home-make-over-banner-3.png";
+  static const String banner_4 = "assets/Images/banners/shoes-banner-4.png";
+
 }

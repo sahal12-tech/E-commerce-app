@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 import '../../../util/constants/colors.dart';
 import '../../../util/constants/sizes.dart';
 import '../../../util/helpers/helper_functions.dart';
@@ -22,7 +20,7 @@ class EVerticalImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = EHelperFunctions.isdarkMode(context);
+    //final dark = EHelperFunctions.isdarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
@@ -34,7 +32,11 @@ class EVerticalImageText extends StatelessWidget {
               height: 56,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: backgroundColor ?? (EHelperFunctions.isdarkMode(context) ? EColors.dark : EColors.white),
+                color:
+                    backgroundColor ??
+                    (EHelperFunctions.isdarkMode(context)
+                        ? EColors.dark
+                        : EColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
@@ -45,7 +47,9 @@ class EVerticalImageText extends StatelessWidget {
                   height: 28,
                   // Explicit height inside the container
                   fit: BoxFit.contain,
-                  color: (EHelperFunctions.isdarkMode(context) ? EColors.dark : EColors.white),
+                  color: (EHelperFunctions.isdarkMode(context)
+                      ? EColors.white
+                      : EColors.dark),
                 ),
               ),
             ),

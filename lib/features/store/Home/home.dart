@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
-import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
+import 'package:flutter_catelog_page/features/store/Home/widgets/ERoundedBannerImage.dart';
+import 'package:flutter_catelog_page/features/store/Home/widgets/home_categories.dart';
 import '../../../common/widgets/custom_shape/containers/EPrimary_Header_Container.dart';
 import '../../../common/widgets/custom_shape/containers/ESearchContainer.dart';
-import '../../../common/widgets/image_text_widget/vertical_image_text.dart';
 import '../../../common/widgets/texts/section_heading.dart';
 import '../../../util/constants/colors.dart';
 import '../../../util/constants/image_strings.dart';
@@ -49,10 +49,15 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
+              child: ERoundBannerImage(
+                imageURL: EImages.banner_1,
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
