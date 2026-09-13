@@ -38,6 +38,10 @@ class EColors{
   static const Color buttonSecondary = Color(0xff6c757d);
   static const Color buttonDisabled = Color(0xffc4c4c4);
 
+  //border Color
+  static const Color borderPrimary = Color(0xffd9d9d9);
+  static const Color borderSecondary = Color(0xffe6e6e6);
+
   //Error and Validation Colors
   static const Color error = Color(0xfff44336);
   static const Color success = Color(0xff4caf50);

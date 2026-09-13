@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(ESizes.defaultSpace),
               child: Column(
                 children: [
-                  EPromeCarousalSlider(controller: controller),
+                  EPromoCarousalSlider(controller: controller),
 
                   //Vertical product card
 

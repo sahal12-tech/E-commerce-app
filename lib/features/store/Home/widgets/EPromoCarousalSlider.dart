@@ -8,8 +8,8 @@ import '../../../../util/constants/sizes.dart';
 import '../../controllers/home_controller.dart';
 import 'ERoundedBannerImage.dart';
 
-class EPromeCarousalSlider extends StatelessWidget {
-  const EPromeCarousalSlider({super.key, required this.controller});
+class EPromoCarousalSlider extends StatelessWidget {
+  const EPromoCarousalSlider({super.key, required this.controller});
 
   final HomeController controller;
 

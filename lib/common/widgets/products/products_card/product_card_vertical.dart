@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/common/styles/EShadowStyle.dart';
+import 'package:flutter_catelog_page/common/widgets/custom_shape/containers/ERounded_Container.dart';
 import 'package:flutter_catelog_page/util/constants/colors.dart';
 import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
@@ -16,11 +17,15 @@ class EProductCardVertical extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [EShadowstyle.verticalProductShadow],
         borderRadius: BorderRadius.circular(ESizes.productImageRadius),
-        color: dark  ? EColors.darkGrey : EColors.light,
-
-
+        color: dark ? EColors.darkGrey : EColors.light,
       ),
-
+      child: Column(children: [ERoundedContainer(
+        height: 180,
+        padding: const EdgeInsets.all(ESizes.sm),
+        backgroundColor: dark ? EColors.dark : EColors.light,
+      )
+      ]
+      ),
     );
   }
 }
