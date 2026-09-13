@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
-import 'package:flutter_catelog_page/features/store/Home/widgets/ERoundedBannerImage.dart';
+import 'package:flutter_catelog_page/features/store/Home/widgets/EPromoCarousalSlider.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/home_categories.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 import '../../../common/widgets/custom_shape/containers/EPrimary_Header_Container.dart';
 import '../../../common/widgets/custom_shape/containers/ESearchContainer.dart';
 import '../../../common/widgets/texts/section_heading.dart';
 import '../../../util/constants/colors.dart';
-import '../../../util/constants/image_strings.dart';
 import '../../../util/constants/sizes.dart';
+import '../controllers/home_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(HomeController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -51,8 +54,10 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(ESizes.defaultSpace),
-              child: ERoundBannerImage(
-                imageURL: EImages.banner_1,
+              child: Column(
+                children: [
+                  EPromeCarousalSlider(controller: controller),
+                ],
               ),
             ),
           ],
