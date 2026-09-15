@@ -19,12 +19,14 @@ class EProductCardVertical extends StatelessWidget {
         borderRadius: BorderRadius.circular(ESizes.productImageRadius),
         color: dark ? EColors.darkGrey : EColors.light,
       ),
-      child: Column(children: [ERoundedContainer(
-        height: 180,
-        padding: const EdgeInsets.all(ESizes.sm),
-        backgroundColor: dark ? EColors.dark : EColors.light,
-      )
-      ]
+      child: Column(
+        children: [
+          ERoundedContainer(
+            height: 180,
+            padding: const EdgeInsets.all(ESizes.sm),
+            backgroundColor: dark ? EColors.dark : EColors.light,
+          ),
+        ],
       ),
     );
   }

@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "meta": {
+    "title": "E-Commerce App Runtime Architecture",
+    "description": "High-level architecture showing Flutter UI, GetX state management, HTTP layer, and DummyJSON API integration",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "components": [
+    {
+      "id": "ui-layer",
+      "type": "frontend",
+      "label": "Flutter UI Screens",
+      "details": "LoginScreen, SignupScreen, HomeScreen with navigation"
+    },
+    {
+      "id": "state-mgmt",
+      "type": "backend",
+      "label": "GetX State Management",
+      "details": "Controllers for UI state and reactivity"
+    },
+    {
+      "id": "http-layer",
+      "type": "backend",
+      "label": "HTTP Utility Layer",
+      "details": "EHttpHelper class handling GET/POST/PUT/DELETE requests"
+    },
+    {
+      "id": "api-service",
+      "type": "external",
+      "label": "DummyJSON API",
+      "details": "RESTful API providing product, user, and cart data"
+    },
+    {
+      "id": "auth-service",
+      "type": "external",
+      "label": "Authentication Service",
+      "details": "Handles user login/signup (placeholder implementation)"
+    },
+    {
+      "id": "local-storage",
+      "type": "backend",
+      "label": "Local Storage",
+      "details": "Secure storage for tokens and user preferences"
+    },
+    {
+      "id": "asset-manager",
+      "type": "frontend",
+      "label": "Asset & Font Manager",
+      "details": "Handles images, fonts (Poppins), and icons"
+    },
+    {
+      "id": "theme-engine",
+      "type": "frontend",
+      "label": "Theme Engine",
+      "details": "Light/Dark theme support with custom colors"
+    }
+  ],
+  "routes": [
+    {
+      "from": "ui-layer",
+      "to": "state-mgmt",
+      "label": "User interactions & state updates"
+    },
+    {
+      "from": "state-mgmt",
+      "to": "http-layer",
+      "label": "Data requests & commands"
+    },
+    {
+      "from": "http-layer",
+      "to": "api-service",
+      "label": "HTTP requests (GET/POST)"
+    },
+    {
+      "from": "api-service",
+      "to": "http-layer",
+      "label": "JSON responses"
+    },
+    {
+      "from": "http-layer",
+      "to": "state-mgmt",
+      "label": "Processed data"
+    },
+    {
+      "from": "state-mgmt",
+      "to": "ui-layer",
+      "label": "UI updates via GetX reactivity"
+    },
+    {
+      "from": "ui-layer",
+      "to": "asset-manager",
+      "label": "Resource loading"
+    },
+    {
+      "from": "ui-layer",
+      "to": "theme-engine",
+      "label": "Theme application"
+    },
+    {
+      "from": "state-mgmt",
+      "to": "local-storage",
+      "label": "Token/user data persistence"
+    },
+    {
+      "from": "local-storage",
+      "to": "state-mgmt",
+      "label": "Retrieve stored data"
+    }
+  ],
+  "groups": [
+    {
+      "id": "client-boundary",
+      "label": "Client Application",
+      "components": ["ui-layer", "state-mgmt", "http-layer", "asset-manager", "theme-engine"],
+      "type": "trust-boundary"
+    },
+    {
+      "id": "server-boundary",
+      "label": "External Services",
+      "components": ["api-service", "auth-service", "local-storage"],
+      "type": "trust-boundary"
+    }
+  ]
+}

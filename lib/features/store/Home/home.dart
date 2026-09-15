@@ -58,9 +58,8 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   EPromoCarousalSlider(controller: controller),
-
+                  SizedBox(height: ESizes.spaceBtwSections,),
                   //Vertical product card
-
                   EProductCardVertical()
                 ],
               ),

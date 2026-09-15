@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "E-Commerce App Runtime Architecture",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "components": [
+    {
+      "id": "ui-screens",
+      "type": "frontend",
+      "label": "Flutter UI Screens",
+      "sublabel": "Login, Signup, Home, Product Details",
+      "pos": [100, 100],
+      "size": [180, 80]
+    },
+    {
+      "id": "getx-controller",
+      "type": "backend",
+      "label": "GetX State Management",
+      "sublabel": "Controllers & Rx State",
+      "pos": [100, 250],
+      "size": [180, 80]
+    },
+    {
+      "id": "http-layer",
+      "type": "backend",
+      "label": "HTTP Utility Layer",
+      "sublabel": "EHttpHelper (GET/POST/PUT/DELETE)",
+      "pos": [100, 400],
+      "size": [180, 80]
+    },
+    {
+      "id": "dummyjson-api",
+      "type": "external",
+      "label": "DummyJSON API",
+      "sublabel": "REST API for products, users, carts",
+      "pos": [400, 400],
+      "size": [180, 80]
+    },
+    {
+      "id": "auth-service",
+      "type": "external",
+      "label": "Authentication Service",
+      "sublabel": "Handles login/signup (placeholder)",
+      "pos": [400, 250],
+      "size": [180, 80]
+    },
+    {
+      "id": "local-storage",
+      "type": "backend",
+      "label": "Local Storage",
+      "sublabel": "Secure storage for tokens & prefs",
+      "pos": [100, 550],
+      "size": [180, 80]
+    },
+    {
+      "id": "asset-manager",
+      "type": "frontend",
+      "label": "Asset & Font Manager",
+      "sublabel": "Images, Poppins font, icons",
+      "pos": [400, 100],
+      "size": [180, 80]
+    },
+    {
+      "id": "theme-engine",
+      "type": "frontend",
+      "label": "Theme Engine",
+      "sublabel": "Light/Dark theme support",
+      "pos": [400, 550],
+      "size": [180, 80]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Client Application",
+      "wraps": ["ui-screens", "getx-controller", "http-layer", "asset-manager", "theme-engine"]
+    },
+    {
+      "kind": "region",
+      "label": "External Services",
+      "wraps": ["dummyjson-api", "auth-service"]
+    }
+  ],
+  "connections": [
+    { "id": "ui-to-controller", "from": "ui-screens", "to": "getx-controller", "label": "User actions & state updates" },
+    { "id": "controller-to-http", "from": "getx-controller", "to": "http-layer", "label": "Data requests" },
+    { "id": "http-to-api", "from": "http-layer", "to": "dummyjson-api", "label": "HTTP requests (GET/POST)", "variant": "emphasis" },
+    { "id": "api-to-http", "from": "dummyjson-api", "to": "http-layer", "label": "JSON responses" },
+    { "id": "http-to-controller", "from": "http-layer", "to": "getx-controller", "label": "Processed data" },
+    { "id": "controller-to-ui", "from": "getx-controller", "to": "ui-screens", "label": "UI updates via GetX reactivity" },
+    { "id": "controller-to-storage", "from": "getx-controller", "to": "local-storage", "label": "Persist token/user data" },
+    { "id": "storage-to-controller", "from": "local-storage", "to": "getx-controller", "label": "Retrieve stored data" },
+    { "id": "ui-to-assets", "from": "ui-screens", "to": "asset-manager", "label": "Load images/fonts" },
+    { "id": "ui-to-theme", "from": "ui-screens", "to": "theme-engine", "label": "Apply theme" },
+    { "id": "ui-to-auth", "from": "ui-screens", "to": "auth-service", "label": "Login/signup requests" },
+    { "id": "auth-to-ui", "from": "auth-service", "to": "ui-screens", "label": "Auth tokens/responses" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "UI Screens", "items": ["LoginScreen", "SignupScreen", "HomeScreen", "ProductDetailScreen"] },
+    { "dot": "emerald", "title": "State Management", "items": ["HomeController (carousel index)", "GetX reactive state management"] },
+    { "dot": "rose", "title": "HTTP Layer", "items": ["EHttpHelper class", "Uses http package", "Base URL configurable"] },
+    { "dot": "violet", "title": "External API", "items": ["DummyJSON: https://dummyjson.com", "Products, Users, Carts endpoints"] }
+  ]
+}

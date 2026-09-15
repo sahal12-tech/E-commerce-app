@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "E-Commerce App Runtime Architecture",
+    "quality_profile": "showcase",
+    "locale": "en"
+  },
+  "components": [
+    {
+      "id": "ui",
+      "type": "frontend",
+      "label": "Flutter UI Screens",
+      "pos": [100, 200],
+      "size": [180, 80]
+    },
+    {
+      "id": "getx",
+      "type": "backend",
+      "label": "GetX State Management",
+      "pos": [300, 200],
+      "size": [180, 80]
+    },
+    {
+      "id": "http",
+      "type": "backend",
+      "label": "HTTP Utility Layer",
+      "pos": [500, 200],
+      "size": [180, 80]
+    },
+    {
+      "id": "api",
+      "type": "external",
+      "label": "DummyJSON API",
+      "pos": [700, 200],
+      "size": [180, 80]
+    }
+  ],
+  "connections": [
+    { "id": "ui-to-getx", "from": "ui", "to": "getx", "label": "User actions & state updates" },
+    { "id": "getx-to-http", "from": "getx", "to": "http", "label": "Data requests" },
+    { "id": "http-to-api", "from": "http", "to": "api", "label": "HTTP requests (GET/POST)", "variant": "emphasis" },
+    { "id": "api-to-http", "from": "api", "to": "http", "label": "JSON responses" },
+    { "id": "http-to-getx", "from": "http", "to": "getx", "label": "Processed data" },
+    { "id": "getx-to-ui", "from": "getx", "to": "ui", "label": "UI updates via GetX reactivity" }
+  ]
+}
