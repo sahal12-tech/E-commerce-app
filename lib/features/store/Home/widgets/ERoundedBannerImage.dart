@@ -16,7 +16,6 @@ class ERoundBannerImage extends StatelessWidget {
     this.isNetworkImage = false,
     this.onPressed,
     this.borderRadius = ESizes.md,
-    //this.aspectRatio = 1640 / 896,
   });
 
   final double? width, height;
