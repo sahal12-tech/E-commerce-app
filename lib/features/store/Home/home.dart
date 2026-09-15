@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/common/widgets/products/products_card/product_card_vertical.dart';
+import 'package:flutter_catelog_page/common/widgets/layout/grid_layout.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EAppBar.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/EPromoCarousalSlider.dart';
 import 'package:flutter_catelog_page/features/store/Home/widgets/home_categories.dart';
@@ -59,8 +60,18 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   EPromoCarousalSlider(controller: controller),
                   SizedBox(height: ESizes.spaceBtwSections,),
-                  //Vertical product card
-                  EProductCardVertical()
+                  // Vertical product card grid
+                  ESectionHeading(
+                    title: 'Popular Products',
+                    showActionButton: true,
+                    textColor: EColors.white,
+                    onPressed: () => {},
+                  ),
+                  SizedBox(height: ESizes.spaceBtwitems),
+                  EGridLayout(
+                    itemCount: 4, // Show 4 products for demo
+                    itemBuilder: (_, index) => const EProductCardVertical(),
+                  )
                 ],
               ),
             ),
