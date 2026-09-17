@@ -64,12 +64,11 @@ class HomeScreen extends StatelessWidget {
                   ESectionHeading(
                     title: 'Popular Products',
                     showActionButton: true,
-                    textColor: EColors.white,
                     onPressed: () => {},
                   ),
                   SizedBox(height: ESizes.spaceBtwitems),
                   EGridLayout(
-                    itemCount: 4, // Show 4 products for demo
+                    itemCount: 6, // Show 4 products for demo
                     itemBuilder: (_, index) => const EProductCardVertical(),
                   )
                 ],

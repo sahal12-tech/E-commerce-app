@@ -23,7 +23,7 @@ class EGridLayout extends StatelessWidget {
         crossAxisCount: 2,
         mainAxisSpacing: ESizes.gridViewSpacing,
         crossAxisSpacing: ESizes.gridViewSpacing,
-        childAspectRatio: 180 / mainAxisExtent, // Fixed: width/height ratio (180 is card width)
+        mainAxisExtent: mainAxisExtent, // fixed height regardless of cell width — this was the bug
       ),
       itemBuilder: itemBuilder,
     );
