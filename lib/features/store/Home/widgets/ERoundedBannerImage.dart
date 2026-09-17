@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../util/constants/colors.dart';
 import '../../../../util/constants/sizes.dart';
 
 class ERoundBannerImage extends StatelessWidget {
@@ -10,8 +9,8 @@ class ERoundBannerImage extends StatelessWidget {
     required this.imageURL,
     this.applyImageRadius = true,
     this.border,
-    this.backgroundColor = EColors.light,
-    this.fit,
+    this.backgroundColor,
+    this.fit = BoxFit.cover,
     this.padding,
     this.isNetworkImage = false,
     this.onPressed,
@@ -22,7 +21,7 @@ class ERoundBannerImage extends StatelessWidget {
   final String imageURL;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;

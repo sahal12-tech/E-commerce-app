@@ -39,7 +39,6 @@ class EProductCardVertical extends StatelessWidget {
                   child: ERoundBannerImage(
                     imageURL: EImages.productImage1,
                     applyImageRadius: true,
-                    fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
