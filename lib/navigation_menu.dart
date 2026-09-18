@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/features/store/Store/store.dart';
 import 'package:flutter_catelog_page/util/constants/colors.dart';
 import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'features/authentication/screens/login/login.dart';
 import 'features/store/Home/home.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -64,7 +64,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.green),
+    const StoreScreen(),
     Container(color: Colors.red),
     Container(color: Colors.yellow),
   ];
