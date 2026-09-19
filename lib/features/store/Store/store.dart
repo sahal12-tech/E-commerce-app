@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog_page/common/widgets/AppBar/appbar.dart';
+import 'package:flutter_catelog_page/common/widgets/AppBar/tabBar.dart';
 import 'package:flutter_catelog_page/common/widgets/custom_shape/containers/ERounded_Container.dart';
 import 'package:flutter_catelog_page/common/widgets/custom_shape/containers/ESearchContainer.dart';
 import 'package:flutter_catelog_page/common/widgets/layout/grid_layout.dart';
@@ -18,98 +19,148 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isdarkMode(context);
-    return Scaffold(
-      appBar: EAppBar(
-        showBackArrow: false,
-        title: Text("Store", style: Theme.of(context).textTheme.headlineMedium),
-        actions: [ECartCounterIcon(count: 4, onTap: () {})],
-      ),
-      body: NestedScrollView(
-        headerSliverBuilder: (_, innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              pinned: true,
-              floating: true,
-              backgroundColor: dark ? EColors.black : EColors.white,
-              expandedHeight: 440,
-              automaticallyImplyLeading: false,
-              flexibleSpace: Padding(
-                padding: EdgeInsetsGeometry.all(ESizes.defaultSpace),
-                child: ListView(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    ///Search Bar
-                    const SizedBox(height: ESizes.spaceBtwitems),
-                    const ESearchContainer(
-                      text: 'Search in Store',
-                      showBorder: true,
-                      showBackground: false,
-                      padding: EdgeInsets.zero,
-                    ),
-                    const SizedBox(height: ESizes.spaceBtwSections),
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: EAppBar(
+          showBackArrow: false,
+          title: Text(
+            "Store",
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          actions: [ECartCounterIcon(count: 4, onTap: () {})],
+        ),
+        body: NestedScrollView(
+          headerSliverBuilder: (_, innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                pinned: true,
+                floating: true,
+                backgroundColor: dark ? EColors.black : EColors.white,
+                expandedHeight: 440,
+                automaticallyImplyLeading: false,
+                flexibleSpace: Padding(
+                  padding: EdgeInsetsGeometry.all(ESizes.defaultSpace),
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    children: [
+                      ///Search Bar
+                      const SizedBox(height: ESizes.spaceBtwitems),
+                      const ESearchContainer(
+                        text: 'Search in Store',
+                        showBorder: true,
+                        showBackground: false,
+                        padding: EdgeInsets.zero,
+                      ),
+                      const SizedBox(height: ESizes.spaceBtwSections),
 
-                    /// Featured Brands
-                    ESectionHeading(
-                      title: 'Featured Brands',
-                      showActionButton: true,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(height: ESizes.spaceBtwitems / 1.5),
+                      /// Featured Brands
+                      ESectionHeading(
+                        title: 'Featured Brands',
+                        showActionButton: true,
+                        onPressed: () {},
+                      ),
+                      const SizedBox(height: ESizes.spaceBtwitems / 1.5),
 
-                    EGridLayout(
-                      mainAxisExtent: 80,
-                      itemCount: 4,
-                      itemBuilder: (_, index) {
-                        return GestureDetector(
-                          onTap: () {},
-                          child: ERoundedContainer(
-                            padding: EdgeInsetsGeometry.all(ESizes.sm),
-                            showBorder: true,
-                            backgroundColor: Colors.transparent,
-                            borderColor: EHelperFunctions.isdarkMode(context)
-                                ? EColors.light
-                                : EColors.grey,
-                            child: Row(
-                              children: [
-                                ///Icon
-                                Flexible(child: const ECircularIconImage()),
-
-                                const SizedBox(width: ESizes.spaceBtwitems / 2),
-
-                                ///--Text
-                                Expanded(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      const EBrandTitleWithVerifiedIcon(
-                                        title: 'Nike',
-                                        brandTextSize: TextSizes.large,
-                                      ),
-                                      Text(
-                                        "256 Products of abcd of hij",
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(
-                                          context,
-                                        ).textTheme.labelMedium,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-                      },
-                    ),
+                      EGridLayout(
+                        mainAxisExtent: 80,
+                        itemCount: 4,
+                        itemBuilder: (_, index) {
+                          return EBrandCard();
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                bottom: ETabBar(
+                  tabs: [
+                    Tab(child: Text('Sports')),
+                    Tab(child: Text('Furniture')),
+                    Tab(child: Text('Electronics')),
+                    Tab(child: Text('Clothes')),
+                    Tab(child: Text('Cosmetics')),
                   ],
                 ),
               ),
+            ];
+          },
+          body: TabBarView(
+            children: [
+              Padding(
+                padding: EdgeInsetsGeometry.all(ESizes.defaultSpace),
+                child: Column(
+                  children: [
+                    ///Brands
+                    ERoundedContainer(
+                      showBorder: true,
+                      borderColor: EColors.darkGrey,
+                      margin :const EdgeInsetsGeometry.only(bottom: ESizes.defaultSpace),
+                      child: Column(
+
+                      ),
+                    ),
+
+                    ///Products
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class EBrandCard extends StatelessWidget {
+  const EBrandCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: ERoundedContainer(
+        padding: EdgeInsetsGeometry.all(ESizes.sm),
+        showBorder: true,
+        backgroundColor: Colors.transparent,
+        borderColor: EHelperFunctions.isdarkMode(context)
+            ? EColors.light
+            : EColors.grey,
+        child: Row(
+          children: [
+            ///Icon
+            Flexible(child: const ECircularIconImage()),
+
+            const SizedBox(
+              width: ESizes.spaceBtwitems / 2,
             ),
-          ];
-        },
-        body: Container(),
+
+            ///--Text
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment:
+                    CrossAxisAlignment.start,
+                children: [
+                  const EBrandTitleWithVerifiedIcon(
+                    title: 'Nike',
+                    brandTextSize: TextSizes.large,
+                  ),
+                  Text(
+                    "256 Products of abcd of hij",
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(
+                      context,
+                    ).textTheme.labelMedium,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
