@@ -8,7 +8,8 @@ import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../Icons/ECircularIcon.dart';
-import '../../texts/product_title_text.dart';
+import '../../texts/EBrand_Title_With_Verify_Icon.dart';
+import '../../texts/EBrand_title_text.dart';
 import '../../texts/product_price_text.dart';
 
 class EProductCardVertical extends StatelessWidget {
@@ -78,25 +79,13 @@ class EProductCardVertical extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const EProductTitleText(
+              const EBrandTitleText(
                 title: "Green Nike Air Shoes",
-                smallSize: true,
               ),
 
               const SizedBox(height: ESizes.xs), // was spaceBtwitems / 2
 
-              Row(
-                children: [
-                  Text(
-                    "Nike",
-                    style: Theme.of(context).textTheme.labelMedium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  const SizedBox(width: ESizes.xs),
-                  const Icon(Iconsax.verify, size: ESizes.iconXs, color: EColors.primary),
-                ],
-              ),
+              EBrandTitleWithVerifiedIcon(title: 'Nike',),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

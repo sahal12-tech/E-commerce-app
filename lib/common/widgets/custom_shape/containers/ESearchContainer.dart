@@ -3,7 +3,6 @@ import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/device/device_utility.dart';
 import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../../util/constants/colors.dart';
 
 class ESearchContainer extends StatelessWidget {
@@ -13,46 +12,53 @@ class ESearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
+    this.onTap,
+    this.padding = const EdgeInsetsGeometry.symmetric(horizontal: ESizes.defaultSpace)
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground;
   final bool showBorder;
+  final EdgeInsetsGeometry padding;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isdarkMode(context);
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: ESizes.defaultSpace),
-      child: Container(
-        width: EDeviceUtils.getScreenWidth(context),
-        padding: EdgeInsets.all(ESizes.md),
-        decoration: BoxDecoration(
-          color: showBackground
-              ? (dark ? EColors.dark : EColors.white)
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(ESizes.cardRadiusLg),
-          border: showBorder
-              ? Border.all(color: EColors.grey)
-              : null,
-        ),
-        child: Row(
-          children: [
-            if (icon != null)
-              Icon(
-                icon,
-                color: dark ? EColors.white : EColors.darkGrey,
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: padding,
+        child: Container(
+          width: EDeviceUtils.getScreenWidth(context),
+          padding: EdgeInsets.all(ESizes.md),
+          decoration: BoxDecoration(
+            color: showBackground
+                ? (dark ? EColors.dark : EColors.white)
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(ESizes.cardRadiusLg),
+            border: showBorder
+                ? Border.all(color: EColors.grey)
+                : null,
+          ),
+          child: Row(
+            children: [
+              if (icon != null)
+                Icon(
+                  icon,
+                  color: dark ? EColors.white : EColors.darkGrey,
+                ),
+              const SizedBox(width: ESizes.spaceBtwitems),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodySmall!.apply(
+                  color: dark ? EColors.white : EColors.darkGrey,
+                ),
               ),
-            const SizedBox(width: ESizes.spaceBtwitems),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.bodySmall!.apply(
-                color: dark ? EColors.white : EColors.darkGrey,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

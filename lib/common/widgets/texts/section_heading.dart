@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catelog_page/util/constants/colors.dart';
 
 class ESectionHeading extends StatelessWidget {
   const ESectionHeading({
@@ -41,7 +42,7 @@ class ESectionHeading extends StatelessWidget {
         Flexible(
           child: Text(
             title,
-            style: Theme.of(context).textTheme.headlineSmall!.apply(
+            style: Theme.of(context).textTheme.headlineMedium!.apply(
               color: textColor,
               fontSizeFactor: fontSize != null ? 1 : 1,
             ),
@@ -55,7 +56,7 @@ class ESectionHeading extends StatelessWidget {
             child: Text(
               actionText,
               style: Theme.of(context).textTheme.bodyMedium!.apply(
-                color: textColor,
+                color: EColors.primary,
               ),
             ),
           ),
