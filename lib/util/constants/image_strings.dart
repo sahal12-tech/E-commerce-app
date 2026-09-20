@@ -17,6 +17,7 @@ class EImages{
   static const String furnitureIcon = "assets/Icons/Categories_Icons/icons8-chair-100.png";
   static const String electronicsIcon = "assets/Icons/Categories_Icons/icons8-iphone-17-pro-100.png";
   static const String jewelryIcon = "assets/Icons/Categories_Icons/icons8-jewelry-100.png";
+  static const String nikeIcon = "assets/Icons/Categories_Icons/icons8-nike-100.png";
 
   //--banners
   static const String banner_1 = "assets/Images/banners/Fashion-banner-1.png";

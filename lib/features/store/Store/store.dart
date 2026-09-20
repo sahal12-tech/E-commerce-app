@@ -103,24 +103,59 @@ class StoreScreen extends StatelessWidget {
                       margin: const EdgeInsetsGeometry.only(
                         bottom: ESizes.defaultSpace,
                       ),
+                      padding: EdgeInsetsGeometry.all(ESizes.md),
                       child: Column(
                         children: [
                           const EBrandCard(showBorder: false),
 
                           Row(
                             children: [
-                              ERoundedContainer(
-                                height: 100,
-                                backgroundColor: dark
-                                    ? EColors.darkerGrey
-                                    : EColors.light,
-                                margin: const EdgeInsetsGeometry.only(
-                                  right: ESizes.sm,
+                              Expanded(
+                                child: ERoundedContainer(
+                                  height: 100,
+                                  backgroundColor: dark
+                                      ? EColors.darkerGrey
+                                      : EColors.light,
+                                  margin: const EdgeInsetsGeometry.only(
+                                    right: ESizes.sm,
+                                  ),
+                                  padding: EdgeInsetsGeometry.all(ESizes.md),
+                                  child: Image(
+                                    fit: BoxFit.contain,
+                                    image: AssetImage(EImages.productImage19),
+                                  ),
                                 ),
-                                padding: EdgeInsetsGeometry.all(ESizes.md),
-                                child: Image(
-                                  fit: BoxFit.contain,
-                                  image: AssetImage(EImages.productImage3),
+                              ),
+                              Expanded(
+                                child: ERoundedContainer(
+                                  height: 100,
+                                  backgroundColor: dark
+                                      ? EColors.darkerGrey
+                                      : EColors.light,
+                                  margin: const EdgeInsetsGeometry.only(
+                                    right: ESizes.sm,
+                                  ),
+                                  padding: EdgeInsetsGeometry.all(ESizes.md),
+                                  child: Image(
+                                    fit: BoxFit.contain,
+                                    image: AssetImage(EImages.productImage20),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: ERoundedContainer(
+                                  height: 100,
+                                  backgroundColor: dark
+                                      ? EColors.darkerGrey
+                                      : EColors.light,
+                                  margin: const EdgeInsetsGeometry.only(
+                                    right: ESizes.sm,
+                                  ),
+                                  padding: EdgeInsetsGeometry.all(ESizes.md),
+                                  child: Image(
+                                    fit: BoxFit.contain,
+                                    image: AssetImage(EImages.productImage21),
+                                  ),
                                 ),
                               ),
                             ],
@@ -136,31 +171,6 @@ class StoreScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ECircularIconImage extends StatelessWidget {
-  const ECircularIconImage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 56,
-      height: 56,
-      padding: const EdgeInsetsGeometry.all(ESizes.sm),
-      decoration: BoxDecoration(
-        color: EHelperFunctions.isdarkMode(context)
-            ? EColors.black
-            : EColors.white,
-        borderRadius: BorderRadius.circular(100),
-      ),
-      child: Image(
-        image: AssetImage(EImages.clothIcon),
-        color: EHelperFunctions.isdarkMode(context)
-            ? EColors.white
-            : EColors.black,
       ),
     );
   }

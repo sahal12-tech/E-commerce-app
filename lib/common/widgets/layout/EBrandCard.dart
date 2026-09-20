@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../features/store/Store/store.dart';
 import '../../../util/constants/colors.dart';
 import '../../../util/constants/enums.dart';
+import '../../../util/constants/image_strings.dart';
 import '../../../util/constants/sizes.dart';
 import '../../../util/helpers/helper_functions.dart';
 import '../custom_shape/containers/ERounded_Container.dart';
+import '../custom_shape/containers/E_Circular_Icon_Image_Container.dart';
 import '../texts/EBrand_Title_With_Verify_Icon.dart';
 
 class EBrandCard extends StatelessWidget {
@@ -29,7 +30,7 @@ class EBrandCard extends StatelessWidget {
         child: Row(
           children: [
             ///Icon
-            Flexible(child: const ECircularIconImage()),
+            Flexible(child: const ECircularIconImage(image: EImages.nikeIcon, fit: BoxFit.contain,)),
 
             const SizedBox(width: ESizes.spaceBtwitems / 2),
 
@@ -44,7 +45,7 @@ class EBrandCard extends StatelessWidget {
                     brandTextSize: TextSizes.large,
                   ),
                   Text(
-                    "256 Products of abcd of hij",
+                    "256 Products of Nike",
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
