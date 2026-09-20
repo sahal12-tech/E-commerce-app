@@ -5,13 +5,12 @@ import 'package:flutter_catelog_page/common/widgets/custom_shape/containers/ERou
 import 'package:flutter_catelog_page/common/widgets/custom_shape/containers/ESearchContainer.dart';
 import 'package:flutter_catelog_page/common/widgets/layout/grid_layout.dart';
 import 'package:flutter_catelog_page/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:flutter_catelog_page/common/widgets/texts/EBrand_Title_With_Verify_Icon.dart';
 import 'package:flutter_catelog_page/common/widgets/texts/section_heading.dart';
 import 'package:flutter_catelog_page/util/constants/colors.dart';
-import 'package:flutter_catelog_page/util/constants/enums.dart';
 import 'package:flutter_catelog_page/util/constants/image_strings.dart';
 import 'package:flutter_catelog_page/util/constants/sizes.dart';
 import 'package:flutter_catelog_page/util/helpers/helper_functions.dart';
+import '../../../common/widgets/layout/EBrandCard.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -26,7 +25,10 @@ class StoreScreen extends StatelessWidget {
           showBackArrow: false,
           title: Text(
             "Store",
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme
+                .of(context)
+                .textTheme
+                .headlineMedium,
           ),
           actions: [ECartCounterIcon(count: 4, onTap: () {})],
         ),
@@ -45,6 +47,7 @@ class StoreScreen extends StatelessWidget {
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     children: [
+
                       ///Search Bar
                       const SizedBox(height: ESizes.spaceBtwitems),
                       const ESearchContainer(
@@ -67,7 +70,7 @@ class StoreScreen extends StatelessWidget {
                         mainAxisExtent: 80,
                         itemCount: 4,
                         itemBuilder: (_, index) {
-                          return EBrandCard();
+                          return EBrandCard(showBorder: false);
                         },
                       ),
                     ],
@@ -91,13 +94,38 @@ class StoreScreen extends StatelessWidget {
                 padding: EdgeInsetsGeometry.all(ESizes.defaultSpace),
                 child: Column(
                   children: [
+
                     ///Brands
                     ERoundedContainer(
                       showBorder: true,
                       borderColor: EColors.darkGrey,
-                      margin :const EdgeInsetsGeometry.only(bottom: ESizes.defaultSpace),
+                      backgroundColor: Colors.transparent,
+                      margin: const EdgeInsetsGeometry.only(
+                        bottom: ESizes.defaultSpace,
+                      ),
                       child: Column(
+                        children: [
+                          const EBrandCard(showBorder: false),
 
+                          Row(
+                            children: [
+                              ERoundedContainer(
+                                height: 100,
+                                backgroundColor: dark
+                                    ? EColors.darkerGrey
+                                    : EColors.light,
+                                margin: const EdgeInsetsGeometry.only(
+                                  right: ESizes.sm,
+                                ),
+                                padding: EdgeInsetsGeometry.all(ESizes.md),
+                                child: Image(
+                                  fit: BoxFit.contain,
+                                  image: AssetImage(EImages.productImage3),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
 
@@ -107,59 +135,6 @@ class StoreScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class EBrandCard extends StatelessWidget {
-  const EBrandCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: ERoundedContainer(
-        padding: EdgeInsetsGeometry.all(ESizes.sm),
-        showBorder: true,
-        backgroundColor: Colors.transparent,
-        borderColor: EHelperFunctions.isdarkMode(context)
-            ? EColors.light
-            : EColors.grey,
-        child: Row(
-          children: [
-            ///Icon
-            Flexible(child: const ECircularIconImage()),
-
-            const SizedBox(
-              width: ESizes.spaceBtwitems / 2,
-            ),
-
-            ///--Text
-            Expanded(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
-                children: [
-                  const EBrandTitleWithVerifiedIcon(
-                    title: 'Nike',
-                    brandTextSize: TextSizes.large,
-                  ),
-                  Text(
-                    "256 Products of abcd of hij",
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(
-                      context,
-                    ).textTheme.labelMedium,
-                  ),
-                ],
-              ),
-            ),
-          ],
         ),
       ),
     );
